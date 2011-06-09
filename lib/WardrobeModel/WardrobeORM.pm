@@ -11,13 +11,6 @@ __PACKAGE__->load_namespaces;
 my $log = Log::Log4perl->get_logger();
 
 
-sub get_all_categories {
-	my $self = shift;
-
-	my $category_rs = $self->resultset('Category');
-	return $category_rs->all();
-}
-
 sub get_clothes_by_category {
 	my ($self, $category_id) = @_;
 
