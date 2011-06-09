@@ -1,7 +1,7 @@
 package Wardrobe::Model::Bindings;
 use Moose;
-extends 'Catalyst::Model::DBIC::Schema';
+extends 'Catalyst::Model::Adaptor';
 
 __PACKAGE__->config (
-    schema_class => 'WardrobeModel::WardrobeORM',
+    class => 'WardrobeModel',
 );
